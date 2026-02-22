@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "expertise": "Expertise",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Welcome to",
+    "name": "Shahid Nadeem",
+    "title": "Advocate & Legal Consultant Notary Goverment of India",
+   "subtitle": "LLB Graduate | Supreme Court of India & High Court Practitioner",
+    "description": "Dedicated to delivering justice with integrity, compassion, and unwavering commitment to the rule of law. Providing expert legal counsel across diverse practice areas with a client-first approach.",
+    "cta_primary": "Get Legal Consultation",
+    "cta_secondary": "View Practice Areas"
+  },
+ "expertise": {
+    "section_title": "Practice Areas",
+    "section_subtitle": "Comprehensive legal expertise across multiple domains of law, delivering results-driven representation for every client.",
+    "areas": {
+      "civil": {
+        "title": "Civil Litigation",
+        "description": "Expert representation in property disputes, contract breaches, injunctions, and declaratory suits with a strong track record of favorable outcomes."
+      },
+      "criminal": {
+        "title": "Criminal Defense",
+        "description": "Trial proceedings in UAPA, NIA, and other Special Laws, Appeals in High Courts and Supreme Court of India, and Anticipatory bail matters across all levels of criminal courts, Quashing in High Courts"
+      },
+      "family": {
+        "title": "Family Law",
+        "description": "Compassionate handling of divorce, custody, maintenance, domestic violence, and matrimonial dispute cases with sensitivity and discretion."
+      },
+      "corporate": {
+        "title": "Corporate Law",
+        "description": "Strategic advisory on company formation, regulatory compliance, partnership agreements, and commercial contract drafting and negotiation."
+      },
+      "property": {
+        "title": "Property Law",
+        "description": "Comprehensive services for property registration, title verification, land acquisition disputes, and real estate documentation."
+      },
+      "consumer": {
+        "title": "Consumer Protection",
+        "description": "Assertive advocacy for consumer rights, product liability claims, service deficiency complaints, and unfair trade practice cases."
+      }
+    }
+  },
+  "contact": {
+    "section_title": "Get In Touch",
+    "section_subtitle": "Schedule a confidential consultation to discuss your legal matters. Available for in-person and virtual meetings.",
+    "email_label": "Email",
+    "email": "advshahidnadeem@gmail.com",
+    "phone_label": "Phone",
+    "phone": "+91 9029092370",
+    "address_label": "Office Address",
+    "address_mumbai": "Mumbai Office: Office No 5, Ground Floor, Majidia Mansion, 16th Homi Modi St, Fort, Mumbai 400023",
+    "address_malegaon": "Malegaon Office:- 423, First Floor, CTS No 1398/1, Industrial Compound Shopping Complex, Malegaon-423203 (For Consultation and Notary Work)",
+    "address_delhi": "Delhi Office:- B-1/303, 4th Floor, Taj Enclave, Geeta Colony, Delhi-110031",
+    "hours_label": "Office Hours",
+    "hours": "Mon - Friday: 12:00 AM - 6:00 PM",
+    "cta": "Send Email",
+    "cta_call": "Call Us"
+  },
+  "footer": {
+    "copyright": "© 2026 Shahid Nadeem. All Rights Reserved.",
+    "tagline": "Justice • Integrity • Excellence",
+    "disclaimer": "This website is for informational purposes only and does not constitute legal advice."
+  }
+}
