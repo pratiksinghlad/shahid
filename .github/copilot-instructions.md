@@ -47,7 +47,6 @@ Use the provided Prettier and ESLint rules as the canonical formatter/linter:
 - Extends: `plugin:react/recommended`, `plugin:@typescript-eslint/recommended`, `plugin:react/jsx-runtime`, `plugin:prettier/recommended`, `prettier`
 - Plugins: `prettier`, `@typescript-eslint`
 - Important rules (use these to influence suggestions):
-
   - `"react/prop-types": "off"` (use TypeScript types instead of prop-types)
   - `"@typescript-eslint/ban-ts-comment": "off"`
   - `"@typescript-eslint/no-shadow": "warn"`
@@ -87,7 +86,12 @@ type ButtonProps = {
 
 const Button = ({ label, onClick, disabled = false }: ButtonProps) => {
   return (
-    <button type="button" aria-label={label} onClick={onClick} disabled={disabled}>
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {label}
     </button>
   );
@@ -201,7 +205,6 @@ When Copilot completes a snippet, ensure the following before committing:
 - [ ] Is formatted by Prettier (matches project `.prettierrc`).
 - [ ] Includes minimal but sufficient JSDoc for complex parts.
 - [ ] Handles accessibility basics (labels, roles, keyboard).
-- [ ] Includes unit test or story when adding a user-visible component.
 
 ---
 

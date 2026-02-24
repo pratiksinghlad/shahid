@@ -4,6 +4,7 @@ import theme from "./theme";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import BackgroundWatermark from "./components/BackgroundWatermark";
 
 const ExpertiseSection = React.lazy(
   () => import("./components/ExpertiseSection"),
@@ -19,6 +20,7 @@ const LoadingFallback = () => (
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <BackgroundWatermark />
       <Navbar />
       <main>
         <HeroSection />

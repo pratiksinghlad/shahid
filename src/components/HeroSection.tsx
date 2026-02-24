@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import {
   Box,
   Flex,
@@ -6,19 +7,40 @@ import {
   VStack,
   HStack,
   Image,
+  Button,
+  Skeleton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaBalanceScale, FaGavel } from "react-icons/fa";
 import SectionWrapper from "./SectionWrapper";
 import CustomButton from "./CustomButton";
+import DocumentModal from "./DocumentModal";
 import { BASE_PATH } from "../constants/paths";
+import { useDocumentContent } from "../hooks/useDocumentContent";
 
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
 
+/** Maximum characters shown in the hero preview before truncation. */
+const PREVIEW_CHAR_LIMIT = 200;
+
 const HeroSection = () => {
   const { t } = useTranslation();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const { richHtml, plainText, isLoading } = useDocumentContent(
+    `${BASE_PATH}Shahid_Introduction.md`,
+  );
+
+  const truncatedText = useMemo(() => {
+    if (!plainText) return "";
+    if (plainText.length <= PREVIEW_CHAR_LIMIT) return plainText;
+    // Cut at the last space before the limit to avoid splitting words
+    const cutOff = plainText.lastIndexOf(" ", PREVIEW_CHAR_LIMIT);
+    return `${plainText.slice(0, cutOff > 0 ? cutOff : PREVIEW_CHAR_LIMIT)}...`;
+  }, [plainText]);
 
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
@@ -66,26 +88,6 @@ const HeroSection = () => {
         bg="radial-gradient(circle, rgba(30,58,110,0.3) 0%, transparent 70%)"
         pointerEvents="none"
       />
-
-      {/* Animated Gavel */}
-      <MotionBox
-        position="absolute"
-        top={{ base: "15%", lg: "25%" }}
-        left={{ base: "75%", lg: "50%" }}
-        transformOrigin="bottom right"
-        initial={{ rotate: -20, opacity: 0 }}
-        animate={{ rotate: [-20, 15, -20], opacity: 0.15 }}
-        transition={{
-          rotate: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-          opacity: { duration: 1, delay: 0.5 },
-        }}
-        color="brand.gold.500"
-        pointerEvents="none"
-        zIndex={0}
-      >
-        <FaGavel size={{ base: 80, lg: 120 } as any} />
-      </MotionBox>
-
       <Flex
         direction={{ base: "column", lg: "row" }}
         align="center"
@@ -182,14 +184,55 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <Text
-              fontSize={{ base: "sm", md: "md" }}
-              color="whiteAlpha.700"
-              lineHeight="1.8"
-              maxW="540px"
-            >
-              {t("hero.description")}
-            </Text>
+            {isLoading ? (
+              <VStack spacing={2} w="full" maxW="540px" align="stretch">
+                <Skeleton
+                  height="14px"
+                  startColor="brand.navy.700"
+                  endColor="brand.navy.600"
+                />
+                <Skeleton
+                  height="14px"
+                  startColor="brand.navy.700"
+                  endColor="brand.navy.600"
+                />
+                <Skeleton
+                  height="14px"
+                  w="75%"
+                  startColor="brand.navy.700"
+                  endColor="brand.navy.600"
+                />
+              </VStack>
+            ) : (
+              <Box maxW="540px">
+                <Text
+                  as="span"
+                  fontSize={{ base: "sm", md: "md" }}
+                  color="whiteAlpha.700"
+                  lineHeight="1.8"
+                >
+                  {truncatedText}
+                </Text>
+                {plainText.length > PREVIEW_CHAR_LIMIT && (
+                  <Button
+                    variant="link"
+                    color="brand.gold.400"
+                    fontWeight="600"
+                    fontSize={{ base: "sm", md: "md" }}
+                    ml={2}
+                    textDecoration="underline"
+                    textUnderlineOffset="3px"
+                    onClick={onOpen}
+                    _hover={{
+                      color: "brand.gold.300",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Click More
+                  </Button>
+                )}
+              </Box>
+            )}
           </MotionBox>
 
           <MotionBox
@@ -219,7 +262,7 @@ const HeroSection = () => {
           </MotionBox>
         </VStack>
 
-        {/* Right - Profile Picture Placeholder */}
+        {/* Right - Profile Picture */}
         <MotionFlex
           flex={1}
           justify="center"
@@ -253,7 +296,7 @@ const HeroSection = () => {
               opacity={0.2}
             />
 
-            {/* Avatar Placeholder Area */}
+            {/* Avatar Area */}
             <Flex
               w={{ base: "260px", sm: "300px", md: "340px", lg: "380px" }}
               h={{ base: "320px", sm: "370px", md: "420px", lg: "470px" }}
@@ -304,6 +347,9 @@ const HeroSection = () => {
           </Box>
         </MotionFlex>
       </Flex>
+
+      {/* Document Modal */}
+      <DocumentModal isOpen={isOpen} onClose={onClose} richHtml={richHtml} />
     </SectionWrapper>
   );
 };
