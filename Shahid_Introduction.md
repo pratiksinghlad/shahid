@@ -1,4 +1,4 @@
-I was born into a lower middle-class family in Malegaon, a textile town located approximately 300 km from Mumbai. He received his primary education at an Urdu Medium Municipal School and pursued his graduation through a night college while simultaneously working part-time in a power-loom factory to support his family of seven. As the eldest member of the family, he carried significant responsibilities throughout his academic journey.
+He was born into a lower middle-class family in Malegaon, a textile town located approximately 300 km from Mumbai. He received his primary education at an Urdu Medium Municipal School and pursued his graduation through a night college while simultaneously working part-time in a power-loom factory to support his family of seven. As the eldest member of the family, he carried significant responsibilities throughout his academic journey.
 
 Shahid completed his law graduation from K.B.H. Law College, Malegaon, on a Government Scholarship and was later enrolled with the Bar Council of Maharashtra & Goa, after completion of Law Graduation he migrated to Mumbai in search of better professional opportunities.
 
