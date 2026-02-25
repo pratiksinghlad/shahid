@@ -122,7 +122,7 @@ const Navbar = () => {
             onClick={() => handleNavClick("home")}
           >
             <Image
-              src={`${BASE_PATH}Gavel.gif`}
+              src={`${BASE_PATH}gavel.gif`}
               alt="Advocate Logo"
               w="38px"
               h="38px"
