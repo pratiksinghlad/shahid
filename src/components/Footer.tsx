@@ -11,9 +11,10 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SOCIAL_LINKS } from "../constants/links";
 import { BASE_PATH } from "../constants/paths";
+import { FaXTwitter } from "react-icons/fa6";
 
 const SocialIcon = ({ icon, href, label }: any) => (
   <Link
@@ -112,6 +113,11 @@ const Footer = () => {
                 icon={FaInstagram}
                 href={SOCIAL_LINKS.instagram}
                 label="Instagram"
+              />
+              <SocialIcon
+                icon={FaXTwitter}
+                href={SOCIAL_LINKS.twitter}
+                label="X"
               />
             </HStack>
           </VStack>
