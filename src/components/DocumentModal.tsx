@@ -35,7 +35,7 @@ const DocumentModal = ({
   <Modal
     isOpen={isOpen}
     onClose={onClose}
-    size={{ base: "full", md: "xl", lg: "3xl" }}
+    size={{ base: "md", md: "xl", lg: "3xl" }}
     scrollBehavior="inside"
     isCentered
     motionPreset="slideInBottom"
@@ -45,9 +45,10 @@ const DocumentModal = ({
       bg="brand.navy.900"
       border="1px solid"
       borderColor="brand.gold.500"
-      borderRadius={{ base: 0, md: "12px" }}
-      maxH={{ base: "100vh", md: "80vh" }}
-      mx={{ base: 0, md: 4 }}
+      borderRadius="12px"
+      maxH={{ base: "85vh", md: "80vh" }}
+      mx={{ base: 4, md: "auto" }}
+      w={{ base: "calc(100vw - 2rem)", md: "auto" }}
     >
       <ModalHeader
         color="brand.gold.400"
@@ -55,9 +56,9 @@ const DocumentModal = ({
         borderBottom="1px solid"
         borderColor="whiteAlpha.100"
         pb={4}
-        pt={6}
-        px={{ base: 6, md: 8 }}
-        mr={{ base: 8, md: 0 }}
+        pt={{ base: 5, md: 6 }}
+        px={{ base: 5, md: 8 }}
+        pr={{ base: 12, md: 8 }}
       >
         <Heading
           as="h3"
@@ -77,7 +78,7 @@ const DocumentModal = ({
           color: "brand.navy.900",
           bg: "brand.gold.400",
         }}
-        top={{ base: 5, md: 6 }}
+        top={{ base: 4, md: 6 }}
         right={{ base: 4, md: 6 }}
         zIndex={10}
       />
