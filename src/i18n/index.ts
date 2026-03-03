@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from './locales/en.json';
 import mr from './locales/mr.json';
 import hi from './locales/hi.json';
+import ur from './locales/ur.json';
 
 i18n
   .use(LanguageDetector)
@@ -14,9 +15,10 @@ i18n
       en: { translation: en },
       mr: { translation: mr },
       hi: { translation: hi },
+      ur: { translation: ur },
     },
     fallbackLng: 'en',
-    supportedLngs: ['en', 'mr', 'hi'],
+    supportedLngs: ['en', 'mr', 'hi', 'ur'],
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],

@@ -11,8 +11,9 @@ import { useTranslation } from "react-i18next";
 
 const LANGUAGES = [
   { code: "en", label: "Eng" },
-  { code: "mr", label: "मराठी" },
   { code: "hi", label: "हिंदी" },
+  { code: "mr", label: "मराठी" },
+  { code: "ur", label: "اردو" },
 ];
 
 const LanguageSwitcher = () => {

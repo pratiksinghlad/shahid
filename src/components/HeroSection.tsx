@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaBalanceScale, FaGavel } from "react-icons/fa";
+import { FaBalanceScale } from "react-icons/fa";
 import SectionWrapper from "./SectionWrapper";
 import CustomButton from "./CustomButton";
 import DocumentModal from "./DocumentModal";
@@ -27,11 +27,12 @@ const MotionFlex = motion(Flex);
 const PREVIEW_CHAR_LIMIT = 200;
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const suffix = i18n.language === "en" ? "" : `_${i18n.language}`;
   const { richHtml, plainText, isLoading } = useDocumentContent(
-    `${BASE_PATH}Shahid_Introduction.md`,
+    `${BASE_PATH}Shahid_Introduction${suffix}.md`,
   );
 
   const truncatedText = useMemo(() => {

@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "گھر",
+    "expertise": "مہارت",
+    "contact": "رابطہ"
+  },
+  "hero": {
+    "greeting": "خوش آمدید",
+    "name": "شاہد ندیم",
+    "title": "ایڈووکیٹ اور قانونی مشیر",
+    "subtitle": "ایڈووکیٹ",
+    "description": "انصاف کی فراہمی کے لیے وقف",
+    "cta_primary": "قانونی مشورہ حاصل کریں",
+    "cta_secondary": "ہمارے علاقوں میں دیکھیں"
+  },
+  "expertise": {
+    "section_title": "ہمارے علاقوں میں",
+    "section_subtitle": "کافی تجربہ",
+    "areas": {
+      "civil": {
+        "title": "دیوانی مقدمات",
+        "description": "ہر طرح کی مدد"
+      },
+      "criminal": {
+        "title": "فوجداری دفاع",
+        "description": "جامع تعاون"
+      },
+      "family": {
+        "title": "خاندانی قانون",
+        "description": "ہمددانہ سلوک"
+      },
+      "corporate": {
+        "title": "کارپوریٹ قانون",
+        "description": "کاروباری معاونت"
+      },
+      "property": {
+        "title": "پراپرٹی قانون",
+        "description": "ملکیت خدمات"
+      },
+      "consumer": {
+        "title": "صارفین کا تحفظ",
+        "description": "حقوق کی حفاظت"
+      }
+    }
+  },
+  "contact": {
+    "section_title": "رابطہ کریں",
+    "section_subtitle": "ملاقات کا وقت مقرر کریں",
+    "email_label": "ای میل",
+    "email": "advshahidnadeem@gmail.com",
+    "phone_label": "فون",
+    "phone": "+91 9029092370",
+    "address_label": "آفس کا پتہ",
+    "address_mumbai": "ممبئی",
+    "address_malegaon": "مالیگاؤں",
+    "address_delhi": "دہلی",
+    "hours_label": "اوقات کار",
+    "hours": "پیر - جمعہ",
+    "cta": "ای میل بھیجیں",
+    "cta_call": "ہمیں کال کریں"
+  },
+  "footer": {
+    "copyright": "© 2026 شاہد ندیم۔ تمام حقوق محفوظ ہیں۔",
+    "tagline": "انصاف",
+    "disclaimer": "یہ ویب سائٹ صرف معلوماتی مقاصد کے لیے ہے۔"
+  }
+}
