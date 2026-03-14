@@ -11,7 +11,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SOCIAL_LINKS } from "../constants/links";
 import { BASE_PATH } from "../constants/paths";
 import { FaXTwitter } from "react-icons/fa6";
@@ -96,7 +96,7 @@ const Footer = () => {
           <VStack spacing={3}>
             <Text
               fontSize="xs"
-              color="whiteAlpha.500"
+              color="brand.gold.400"
               textTransform="uppercase"
               letterSpacing="0.15em"
               fontWeight="600"
@@ -132,14 +132,29 @@ const Footer = () => {
           pt={6}
           gap={3}
         >
-          <Text fontSize="xs" color="whiteAlpha.400">
-            {t("footer.copyright")}
-          </Text>
+          <VStack align={{ base: "center", sm: "flex-start" }} spacing={1}>
+            <Text fontSize="xs" color="brand.gold.400">
+              {t("footer.copyright")}
+            </Text>
+            <Text fontSize="xs" color="brand.gold.400">
+              Developed by{" "}
+              <Link
+                href="https://github.com/pratiksinghlad"
+                isExternal
+                fontWeight="700"
+                color="brand.gold.400"
+                _hover={{ textDecoration: "underline", color: "brand.gold.300" }}
+              >
+                pratik singh lad
+              </Link>
+            </Text>
+          </VStack>
           <Text
             fontSize="xs"
-            color="whiteAlpha.400"
+            color="brand.gold.400"
             textAlign={{ base: "center", sm: "right" }}
             maxW="400px"
+            opacity={0.8}
           >
             {t("footer.disclaimer")}
           </Text>

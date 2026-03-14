@@ -5,9 +5,9 @@ import {
   FaBalanceScale,
   FaGavel,
   FaUsers,
-  FaBuilding,
   FaHome,
   FaShieldAlt,
+  FaLandmark,
 } from "react-icons/fa";
 import SectionWrapper from "./SectionWrapper";
 import SectionHeading from "./SectionHeading";
@@ -15,19 +15,19 @@ import SectionHeading from "./SectionHeading";
 const MotionBox = motion(Box);
 
 const AREA_ICONS: Record<string, any> = {
+  humanRights: FaLandmark,
   civil: FaBalanceScale,
   criminal: FaGavel,
   family: FaUsers,
-  corporate: FaBuilding,
   property: FaHome,
   consumer: FaShieldAlt,
 };
 
 const AREA_KEYS = [
+  "humanRights",
   "civil",
   "criminal",
   "family",
-  "corporate",
   "property",
   "consumer",
 ];

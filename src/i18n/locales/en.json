@@ -17,6 +17,10 @@
     "section_title": "Practice Areas",
     "section_subtitle": "Comprehensive legal expertise across multiple domains of law, delivering results-driven representation for every client.",
     "areas": {
+       "humanRights": {
+        "title": "Human Rights & Constitutional Law",
+        "description": "With over a decade of experience in addressing violations of human rights and constitutional protections, actively engaged in defending fundamental rights and promoting constitutional values. Work involves legal advocacy, human rights activism, and handling matters relating to challenges and interpretation under the Constitution of India."
+      },
       "civil": {
         "title": "Civil Litigation",
         "description": "Expert representation in property disputes, contract breaches, injunctions, and declaratory suits with a strong track record of favorable outcomes."
@@ -28,10 +32,6 @@
       "family": {
         "title": "Family Law",
         "description": "Compassionate handling of divorce, custody, maintenance, domestic violence, and matrimonial dispute cases with sensitivity and discretion."
-      },
-      "corporate": {
-        "title": "Corporate Law",
-        "description": "Strategic advisory on company formation, regulatory compliance, partnership agreements, and commercial contract drafting and negotiation."
       },
       "property": {
         "title": "Property Law",
